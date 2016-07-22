@@ -7,6 +7,7 @@ var jade = require('gulp-jade');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var imagemin = require('gulp-imagemin');
 
 // Compile Our Sass
 gulp.task('sass', function() {
@@ -32,10 +33,19 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('assets', function() {
-    return gulp.src('src/assets/*.jpg')
+// pipe assets
+// gulp.task('assets', function() {
+//     return gulp.src('src/assets/*.jpg')
+//         .pipe(gulp.dest('build/assets'));
+// });
+
+// compress images
+gulp.task('imagemin', function() {
+    return gulp.src('src/assets/*')
+        .pipe(imagemin())
         .pipe(gulp.dest('build/assets'));
 });
+
 
 // Watch Files For Changes
 gulp.task('watch', function() {
@@ -45,4 +55,4 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('default', ['sass','jade','scripts','assets','watch']);
+gulp.task('default', ['sass','jade','scripts','imagemin','watch']);
