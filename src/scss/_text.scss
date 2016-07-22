@@ -1,0 +1,34 @@
+.firstSlide-text {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	
+	.text-ctn{
+		width: 50%;
+		height: 50vh;
+		margin: 0 auto;
+		top: 50%;
+		position: relative;
+	  transform: translateY(-50%);
+
+		.inner-text-ctn{
+			top: 50%;
+			position: relative;
+		  transform: translateY(-50%);
+		  overflow: hidden;
+		  // opacity: 0;
+		}
+
+		h1 {
+			font-family: sans-serif;
+			// text-align: center;
+			color: white;
+			-webkit-font-smoothing: antialiased;
+			letter-spacing: 5px;
+			font-size: 7em;
+			margin: 0;
+		}
+	}
+
+}
