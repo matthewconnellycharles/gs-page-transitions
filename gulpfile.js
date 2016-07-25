@@ -7,7 +7,8 @@ var jade = require('gulp-jade');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var imagemin = require('gulp-imagemin');
+// var imagemin = require('gulp-imagemin');
+var imageop = require('gulp-image-optimization');
 
 // Compile Our Sass
 gulp.task('sass', function() {
@@ -42,7 +43,8 @@ gulp.task('scripts', function() {
 // compress images
 gulp.task('imagemin', function() {
     return gulp.src('src/assets/*')
-        .pipe(imagemin())
+        // .pipe(imagemin())
+        .pipe(imageop())
         .pipe(gulp.dest('build/assets'));
 });
 
