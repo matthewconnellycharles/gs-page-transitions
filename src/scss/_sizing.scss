@@ -1,14 +1,13 @@
-// sizing (half, quarter)
-.w-h{
-	width: 50%;
-}
-.w-q{
-	width: 25%;
-}
+// sizing (by quarters)
 
-.h-h{
-	height: 50%;
-}
-.h-q{
-	height: 25%;
+@for $i from 1 through 8 {
+
+	.w-#{$i*25}{
+		width: $i*25%;
+	}
+
+	.h-#{$i*25}{
+		height: $i*25%;
+	}
+
 }

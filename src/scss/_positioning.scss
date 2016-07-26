@@ -1,67 +1,85 @@
-// positioning (left, top)
+// columns and rows (8 per slide)
 
-// left
-.l-0{
-	left: 0;
+%tile {
+	position: absolute;
 }
-.l-25{
-	left: 25%;
+
+.col-1 {
+	@extend %tile;
+	left: -50%;
 }
-.l-50{
+
+.col-2 {
+	@extend %tile;
+	left: -25%;	
+}
+
+.col-3 {
+	@extend %tile;
+	left: 0%;
+}
+
+.col-4 {
+	@extend %tile;
+	left: 25%;	
+}
+
+.col-5 {
+	@extend %tile;
 	left: 50%;
 }
-.l-75{
+
+.col-6 {
+	@extend %tile;
 	left: 75%;
 }
-.l-100{
+
+.col-7 {
+	@extend %tile;
 	left: 100%;
 }
-.l-125{
+
+.col-8 {
+	@extend %tile;
 	left: 125%;
 }
 
-// negative
-.l-n25{
-	left: -25%;
-}
-.l-n50{
-	left: -50%;
-}
-.l-n75{
-	left: -75%;
-}
-.l-n100{
-	left: -100%;
+.row-1 {
+	@extend %tile;
+	top: -50%;
 }
 
+.row-2 {
+	@extend %tile;
+	top: -25%;	
+}
 
-// top
-.t-0{
-	top: 0;
+.row-3 {
+	@extend %tile;
+	top: 0%;
 }
-.t-25{
-	top: 25%;
+
+.row-4 {
+	@extend %tile;
+	top: 25%;	
 }
-.t-50{
+
+.row-5 {
+	@extend %tile;
 	top: 50%;
 }
-.t-75{
+
+.row-6 {
+	@extend %tile;
 	top: 75%;
 }
-.t-100{
+
+.row-7 {
+	@extend %tile;
 	top: 100%;
 }
 
-// negative
-.t-n25{
-	top: -25%;
-}
-.t-n50{
-	top: -50%;
-}
-.t-n75{
-	top: -75%;
-}
-.t-n100{
-	top: -100%;
+.row-8 {
+	@extend %tile;
+	top: 125%;
 }

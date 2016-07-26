@@ -27,7 +27,7 @@ $(document).keyup(function(e) {
 });
 
 // // development fn's
-var tile = document.getElementsByClassName('tile');
+var tile = document.getElementsByClassName('row');
 
 function classShow(){
 	for(var i=0;i< tile.length;i++){
