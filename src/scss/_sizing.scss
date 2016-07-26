@@ -2,11 +2,11 @@
 
 @for $i from 1 through 8 {
 
-	.w-#{$i*25}{
+	.w-#{$i}{
 		width: $i*25%;
 	}
 
-	.h-#{$i*25}{
+	.h-#{$i}{
 		height: $i*25%;
 	}
 

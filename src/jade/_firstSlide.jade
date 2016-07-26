@@ -1,50 +1,42 @@
-mixin tile(row,col,width,height,additional)
-	div(class='row-#{row} col-#{col} w-#{width} h-#{height} #{additional}')
-
 div.slide
 
 	//--------------
 	//- row 1
 	//--------------
 
-	//- create classes for w/h with SASS FOR LOOP
+	//- row col width height classes
 
-	//- row 1
-	+tile(1,1,50,50,'color-1')
-	+tile(1,3,50,50,'color-2')
-	+tile(1,5,50,50,'color-1')
-	+tile(1,7,50,50,'color-2')
+	//- row 1 and 2
+	+tile(1,1,2,2,'color-1')
+	+vHalf(1,3,1,1,'color-2','color-3')
+	+tile(1,4,1,2,'color-3')
+	+tile(1,5,1,2,'color-2')
+	+tile(1,6,2,2,'color-2 bg-1')
+	+tile(1,8,1,2,'color-2')
 	//- 
 
-	//- row 2
-		empty
+	//- row 3 and 4
+	+tile(3,1,2,2,'color-2')
+	+tile(3,3,2,2,'color-1 bg-2')
+	+vHalf(3,5,1,1,'color-1','color-2')
+	+tile(3,6,1,2,'color-3')
+	+tile(3,7,2,2,'color-2 bg-1')
 	//- 
 
-	//- row 3
-	+tile(3,1,50,50,'color-2')
-	+tile(3,3,50,50,'color-1')
-	+tile(3,5,50,50,'color-2')
-	+tile(3,7,50,50,'color-1')
+	//- row 5 and 6
+	+tile(5,1,1,2,'color-1')
+	+tile(5,2,1,2,'color-3')
+	+tile(5,3,1,1,'color-1')
+	+tile(6,3,1,1,'color-2')
+	+tile(5,4,2,2,'color-3')
+	+tile(5,6,1,1,'color-3 bg-1')
+	+tile(6,6,1,1,'color-3 bg-2')
+	+tile(5,7,2,2,'color-3 bg-3')
 	//- 
 
-	//- row 4
-		empty
-	//- 
-
-	//- row 5
-	+tile(5,1,50,50,'color-1')
-	+tile(5,3,50,50,'color-2')
-	+tile(5,5,50,50,'color-1')
-	+tile(5,7,50,50,'color-2')
-	//- 
-
-	//- row 6
-		empty
-	//- 
-
-	//- row 7
-	+tile(7,1,50,50,'color-2')
-	+tile(7,3,50,50,'color-1')
-	+tile(7,5,50,50,'color-2')
-	+tile(7,7,50,50,'color-1')
+	//- row 7 and 8
+	+tile(7,1,2,2,'color-2')
+	+tile(7,3,2,2,'color-1')
+	+tile(7,5,2,2,'color-2')
+	+tile(7,7,2,2,'color-1')
 	//- 

@@ -1,0 +1,6 @@
+mixin tile(row,col,width,height,additional)
+	div(class='row-#{row} col-#{col} w-#{width} h-#{height} #{additional}')
+
+mixin vHalf(row,col,w,h,add1,add2)
+	+tile(row,col,w,h,add1)
+	+tile(row+1,col,w,h,add2)
